@@ -1,5 +1,9 @@
 import 'package:dudev_website/src/constants/colors.dart';
 import 'package:dudev_website/src/constants/nav_items.dart';
+import 'package:dudev_website/src/styles/style.dart';
+import 'package:dudev_website/src/widgets/header_mobile.dart';
+import 'package:dudev_website/src/widgets/header_web.dart';
+import 'package:dudev_website/src/widgets/site_logo.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,43 +24,9 @@ class _MyHomePageState extends State<HomePage> {
           scrollDirection: Axis.vertical,
           children: [
             //MAIN
-            Container(
-              height: 60,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              width: double.maxFinite,
-              decoration: BoxDecoration(
-                  gradient: const LinearGradient(colors: [
-                    Colors.transparent,
-                    AppColors.bgLight1,
-                  ]),
-                  borderRadius: BorderRadius.circular(100)),
-              child: Row(
-                children: [
-                  const Text(
-                    'Dudev',
-                    style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
-                        color: AppColors.yellowSecondary),
-                  ),
-                  const Spacer(),
-                  for (int i = 0; i < navTiles.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          navTiles[i],
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.whitePrimary),
-                        ),
-                      ),
-                    ),
-                ],
-              ),
+            //const HeaderWeb(),
+            HeaderMobile(
+              onMenuTap: () {},
             ),
             //SKILLS
             Container(
