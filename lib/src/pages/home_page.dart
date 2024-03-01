@@ -1,9 +1,7 @@
 import 'package:dudev_website/src/constants/colors.dart';
-import 'package:dudev_website/src/constants/nav_items.dart';
-import 'package:dudev_website/src/styles/style.dart';
+
 import 'package:dudev_website/src/widgets/header_mobile.dart';
-import 'package:dudev_website/src/widgets/header_web.dart';
-import 'package:dudev_website/src/widgets/site_logo.dart';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
