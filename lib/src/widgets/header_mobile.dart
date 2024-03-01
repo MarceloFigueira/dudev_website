@@ -22,13 +22,13 @@ class HeaderMobile extends StatelessWidget {
           children: [
             SiteLogo(
               onTap: () {
-                onLogoTap;
+                onLogoTap?.call();
               },
             ),
             const Spacer(),
             IconButton(
                 onPressed: () {
-                  onMenuTap;
+                  onMenuTap?.call();
                 },
                 icon: const Icon(Icons.menu)),
             const SizedBox(
