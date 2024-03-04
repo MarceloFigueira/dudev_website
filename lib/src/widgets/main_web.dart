@@ -22,6 +22,7 @@ class MainWeb extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // intro message
               const Text(
                 "Olá,\nEu sou o Marcelo\nUm Desenvolvedor Mobile",
                 style: TextStyle(
@@ -33,6 +34,7 @@ class MainWeb extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
+              //contact btn
               SizedBox(
                 width: 250,
                 child: ElevatedButton(
@@ -42,6 +44,7 @@ class MainWeb extends StatelessWidget {
               ),
             ],
           ),
+          // avatar img
           Image.asset(
             "assets/foto.jpeg",
             width: screenWidth / 2,

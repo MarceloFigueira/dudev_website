@@ -3,6 +3,7 @@ import 'package:dudev_website/src/constants/sizes.dart';
 import 'package:dudev_website/src/widgets/drawer_mobile.dart';
 import 'package:dudev_website/src/widgets/header_mobile.dart';
 import 'package:dudev_website/src/widgets/header_web.dart';
+import 'package:dudev_website/src/widgets/main_mobile.dart';
 import 'package:dudev_website/src/widgets/main_web.dart';
 
 import 'package:flutter/material.dart';
@@ -41,7 +42,10 @@ class _MyHomePageState extends State<HomePage> {
                     scaffoldKey.currentState?.openEndDrawer();
                   },
                 ),
-              const MainWeb(),
+              if (constraints.maxWidth >= kMinWebWidth)
+                const MainWeb()
+              else
+                const MainMobile(),
 
               //SKILLS
               Container(
