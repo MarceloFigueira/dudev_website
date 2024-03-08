@@ -1,4 +1,4 @@
-import 'package:dudev_website/src/constants/colors.dart';
+import 'package:dudev_website/src/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MainMobile extends StatelessWidget {
@@ -21,8 +21,8 @@ class MainMobile extends StatelessWidget {
           ShaderMask(
             shaderCallback: (bounds) {
               return LinearGradient(colors: [
-                AppColors.scaffoldBg.withOpacity(0.6),
-                AppColors.scaffoldBg.withOpacity(0.6),
+                AppColors.darkBackground.withOpacity(0.6),
+                AppColors.darkBackground.withOpacity(0.6),
               ]).createShader(bounds);
             },
             blendMode: BlendMode.srcATop,

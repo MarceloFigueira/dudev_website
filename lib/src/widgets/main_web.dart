@@ -1,4 +1,5 @@
-import 'package:dudev_website/src/constants/colors.dart';
+import 'package:dudev_website/src/constants/app_colors.dart';
+import 'package:dudev_website/src/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 class MainWeb extends StatelessWidget {
@@ -21,28 +22,32 @@ class MainWeb extends StatelessWidget {
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // intro message
               const Text(
-                "Olá,\nEu sou o Marcelo\nUm Desenvolvedor Mobile",
+                "Marcelo Figueira",
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: AppSizes.s48,
                     height: 1.5,
                     fontWeight: FontWeight.bold,
                     color: AppColors.whitePrimary),
               ),
               const SizedBox(
-                height: 15,
+                height: 48,
               ),
               //contact btn
               SizedBox(
                 width: 250,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text('Clique aqui'),
+                  child: const Text('Saiba mais sobre mim'),
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            width: 40,
           ),
           // avatar img
           Image.asset(

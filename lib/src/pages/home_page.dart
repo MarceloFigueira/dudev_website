@@ -1,5 +1,5 @@
-import 'package:dudev_website/src/constants/colors.dart';
-import 'package:dudev_website/src/constants/sizes.dart';
+import 'package:dudev_website/src/constants/app_colors.dart';
+import 'package:dudev_website/src/constants/app_sizes.dart';
 import 'package:dudev_website/src/widgets/drawer_mobile.dart';
 import 'package:dudev_website/src/widgets/header_mobile.dart';
 import 'package:dudev_website/src/widgets/header_web.dart';
@@ -25,15 +25,15 @@ class _MyHomePageState extends State<HomePage> {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
           key: scaffoldKey,
-          backgroundColor: AppColors.scaffoldBg,
-          endDrawer: constraints.maxWidth >= kMinWebWidth
+          backgroundColor: AppColors.darkBackground,
+          endDrawer: constraints.maxWidth >= AppSizes.minWebWidth
               ? null
               : const DrawerMobile(),
           body: ListView(
             scrollDirection: Axis.vertical,
             children: [
               //MAIN
-              if (constraints.maxWidth >= kMinWebWidth)
+              if (constraints.maxWidth >= AppSizes.minWebWidth)
                 const HeaderWeb()
               else
                 HeaderMobile(
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<HomePage> {
                     scaffoldKey.currentState?.openEndDrawer();
                   },
                 ),
-              if (constraints.maxWidth >= kMinWebWidth)
+              if (constraints.maxWidth >= AppSizes.minWebWidth)
                 const MainWeb()
               else
                 const MainMobile(),

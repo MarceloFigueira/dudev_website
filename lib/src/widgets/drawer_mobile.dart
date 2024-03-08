@@ -1,4 +1,4 @@
-import 'package:dudev_website/src/constants/colors.dart';
+import 'package:dudev_website/src/constants/app_colors.dart';
 import 'package:dudev_website/src/constants/nav_items.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class DrawerMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.scaffoldBg,
+      backgroundColor: AppColors.darkBackground,
       child: ListView(
         children: [
           Align(

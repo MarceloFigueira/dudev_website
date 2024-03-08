@@ -1,4 +1,4 @@
-import 'package:dudev_website/src/constants/colors.dart';
+import 'package:dudev_website/src/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SiteLogo extends StatelessWidget {
